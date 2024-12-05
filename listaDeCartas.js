@@ -6,17 +6,14 @@ export class ListaDeCartas {
     // Método para adicionar uma carta
     adicionarCarta(carta) {
         this.cartas.push(carta);
-        console.log(`Carta adicionada: ${carta.getDescription()}`);
-    }
+        
 
     // Método para remover uma carta por índice
     removerCarta(index) {
         if (index >= 0 && index < this.cartas.length) {
             const cartaRemovida = this.cartas.splice(index, 1)[0];
-            console.log(`Carta removida: ${cartaRemovida.getDescription()}`);
             return cartaRemovida;
         } else {
-            console.log("Índice inválido! Não foi possível remover a carta.");
             return null;
         }
     }
